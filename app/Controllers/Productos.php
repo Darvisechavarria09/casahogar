@@ -27,7 +27,7 @@ class Productos extends BaseController
             "tipo"=>$tipo
 
         );
-        print_r($datos);
+        print_r($datos);//------------------------
 
     }
 }
