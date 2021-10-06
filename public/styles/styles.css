@@ -1,0 +1,40 @@
+.fondo{
+    background-color: #07A1E1 !important;
+}
+
+.fuente{
+    font-family: 'Lora', serif;
+}
+
+.fuente2{
+    font-family: 'Delius Swash Caps', cursive;
+}
+
+.fondoAdopcion{
+    
+    background-image: url('../img/adopcion2.jpg');
+    background-attachment: fixed;
+    height: 550px;   
+    
+}
+
+.fondoPrincipal{
+    background-color: #07A1E1 !important;
+}
+
+.boton{
+    background-color:#07A1E1 !important;
+    color:white !important;
+}
+
+.fondoDos{
+     background-color:#07A1E1;
+}
+
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.3);
+}
