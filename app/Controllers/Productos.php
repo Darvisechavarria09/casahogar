@@ -9,15 +9,27 @@ class Productos extends BaseController
     }
 
     public function registrar(){
-        //1. recibo todos los datos enviados desde el formulario(vista)
+        /*//1. recibo todos los datos enviados desde el formulario(vista)
         //lo que tengo entre getPost(") es el name de cada input
         $producto=$this->request->getPost("producto");
         $foto=$this->request->getPost("foto");
         $precio=$this->request->getPost("precio");
         $descripcion=$this->request->getPost("descripcion");
-        $tipo=$this->request->getPost("tipo");
+        $tipo=$this->request->getPost("tipo");*/
 
-        //2. crear un arreglo asociativo con los datos del punto 1
+        //2.Valido que llego
+        if($this->validate('producto')){
+            echo("TODO BIEN");
+        }
+        else{
+
+            $mensaje="TIENES DATOS PENDIENTES, TODOS LOS CAMPOS SON REQUERIDOS";
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$mensaje);
+            //echo("TIENES DATOS PENDIENTES, TODOS LOS CAMPOS SON REQUERIDOS");
+        }
+
+
+        /*//3. crear un arreglo asociativo con los datos del punto 1
         $datos=array(
 
             "producto"=>$producto,
@@ -27,7 +39,7 @@ class Productos extends BaseController
             "tipo"=>$tipo
 
         );
-        print_r($datos);//------------------------
+        print_r($datos);//------------------------*/
 
     }
 }

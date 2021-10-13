@@ -52,12 +52,12 @@
                   <input type="text" class="form-control" id="exampleFormControlInput1">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Raza:</label>
+                    <label class="form-label">Foto:</label>
                     <input type="text" class="form-control" name="foto">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Edad:</label>
-                    <input type="number" min="0" class="form-control" name="precio">
+                    <input type="number" min="0" class="form-control" name="edad">
                 </div>
                 <div class="mb-3">
                     <label for="form-label">Descripción:</label>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Tipo de Animal:</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
+                  <select class="form-control" id="tipo">
                     <option selected>Seleccione una opción</option>
                     <option value="1">Perro</option>
                     <option value="2">Gato</option>

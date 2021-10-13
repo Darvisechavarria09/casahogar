@@ -41,7 +41,7 @@
 	</nav>
 </header>
 
-<section>
+<main>
 	<div class="container mt-5">
 		<div class="row mt-5 d-flex justify-content-center">
 			<div class="col-12 col-md-5">
@@ -85,9 +85,28 @@
             </div>
 		</div>
 	</div>
+</main>
+<br>
+<br>
+<section>
+	<?php if(session('mensaje')):?>
+		<div class="modal fade" id="modalrespuesta" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="fondoPrincipal">
+						<h5 class="modal-title" id="exampleModalLabel">CASAHOGAR</h5>
+					</div>
+					<div class="modal-body">
+						<h5><?= session('mensaje')?></h5>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php endif ?>
 </section>
-<br>
-<br>
 <footer class="fondoDos p-5">
 		<div class="container-fluid">
 			<div class="row">
@@ -115,13 +134,12 @@
 					<i class="fab fa-youtube fa-3x"></i>
 					<br>
 					<p class="mt-4">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
-
 				</div>
 			</div>
 		</div>
 </footer>
 
-
+<script type="module" src="<?= base_url('public/js/lanzarmodal.js') ?>"></script>
 <script src="https://kit.fontawesome.com/81dce82071.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
