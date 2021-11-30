@@ -80,8 +80,9 @@
                 </div>
             </form>
 			</div>
-            <div class="col-12 col-md-5 align-self-end">
+            <div class="col-12 col-md-5 align-self-center text-center">
                 <img src="<?= base_url('public/img/productos1.jpg')?>" alt="imagen" class="img-fluid w-100">
+				<a class="btn btn-primary botondos" href="<?= site_url('/productos/listado') ?>">Ver Inventario</a>
             </div>
 		</div>
 	</div>
@@ -94,13 +95,13 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="fondoPrincipal">
-						<h5 class="modal-title" id="exampleModalLabel">CASAHOGAR</h5>
+						<h5 class="mt-3 mb-3 text-center fuente">CASAHOGAR</h5>
 					</div>
 					<div class="modal-body">
-						<h5><?= session('mensaje')?></h5>
+						<h5 class="fuente text-center"><?= session('mensaje')?></h5>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+						<button type="button" class=" fuente btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 					</div>
 				</div>
 			</div>

@@ -77,42 +77,43 @@
 		<div class="container-fluid">
 			<div class="row d-flex justify-content-center mt-4">
 				<div class="col-12 col-md-6">
-					<h3 class="text-center fw-bold text-center fuente2">Hogar de animales ANIMAL PLANET</h3>
+					<h3 class="fw-bold text-center fuente2">Hogar de animales ANIMAL PLANET</h3>
 					<p class="text-center fuente2">
               			Casa hogar Animalandia, atiende desde 1996 animales y fauna silvestre en estado de abandono, ofreciendo atención integral, además somos fabricantes de comida y accesorios para todo tipo de mascota
             		</p>
 				</div>
 			</div>
-			<div class="row d-flex justify-content-center mt-5 mx-5 mb-5">
+			<div class="row d-flex justify-content-center mt-3 mx-5 mb-5 fuente2">
+				<h1 class="fw-bold text-center">Consultar Para Adopción</h1>
 				<div class="col-1">
-					<a href="">
+					<a href="<?= site_url('/animales/listarperros') ?>">
 						<img src="<?= base_url('public/img/dog-icon.png')?>" alt="icono1" class="img-fluid zoom">
 					</a>
-            		<p class="text-center">perros</p>
+            		<p class="text-center">Perros</p>
           		</div>
 				<div class="col-1">
-					<a href="">
+					<a href="<?= site_url('/animales/listargatos') ?>">
 						<img src="<?= base_url('public/img/cat-icon.png')?>" alt="icono1" class="img-fluid zoom">
 					</a>
-					<p class="text-center">gatos</p>
+					<p class="text-center">Gatos</p>
 				</div>
 				<div class="col-1">
-					<a href="">
+					<a href="<?= site_url('/animales/listaraves') ?>">
 						<img src="<?= base_url('public/img/bird-icon.png')?>" alt="icono1" class="img-fluid zoom">
 					</a>
 					<p class="text-center">Aves</p>
 				</div>
 				<div class="col-1">
-					<a href="">
+					<a href="<?= site_url('/animales/listarreptiles') ?>">
 						<img src="<?= base_url('public/img/reptile-icon.png')?>" alt="icono1" class="img-fluid zoom">
 					</a>
-					<p class="text-center">reptiles</p>
+					<p class="text-center">Reptiles</p>
 				</div>
 				<div class="col-1">
-					<a href="">
+					<a href="<?= site_url('/animales/listarcaballos') ?>">
 						<img src="<?= base_url('public/img/horse-icon.png')?>" alt="icono1" class="img-fluid zoom">
 					</a>
-					<p class="text-center">caballos</p>
+					<p class="text-center">Caballos</p>
 				</div>
 			</div>
 

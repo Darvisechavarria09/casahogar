@@ -23,7 +23,12 @@
 }
 
 .boton{
-    background-color:#07A1E1 !important;
+    background-color:#07e107 !important;
+    color:white !important;
+}
+
+.botondos{
+    background-color:#e16507 !important;
     color:white !important;
 }
 

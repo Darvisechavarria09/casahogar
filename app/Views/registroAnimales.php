@@ -41,15 +41,15 @@
 	</nav>
 </header>
 
-<section>
+<main>
 	<div class="container mt-5">
 		<div class="row mt-5 d-flex justify-content-center">
 			<div class="col-12 col-md-5">
             <h3 class="text-center fw-bold text-center fuente2">Registro de Animales ANIMAL PLANET</h3>
-            <form>
+            <form action="<?= site_url('/animales/registro/nuevo') ?>" method="POST" class="mt-4">
                 <div class="mb-3">
                   <label for="exampleFormControlInput1">Nombre:</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1">
+                  <input type="text" class="form-control" name="nombre">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Foto:</label>
@@ -65,13 +65,13 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Tipo de Animal:</label>
-                  <select class="form-control" id="tipo">
+                  <select class="form-control" name="tipo">
                     <option selected>Seleccione una opción</option>
                     <option value="1">Perro</option>
                     <option value="2">Gato</option>
-                    <option value="3">Caballo</option>
-                    <option value="4">Aves</option>
-                    <option value="5">Reptíl</option>
+                    <option value="3">Ave</option>
+                    <option value="4">Reptíl</option>
+                    <option value="5">Caballo</option>
                   </select>
                 </div>
                 <br>
@@ -80,14 +80,34 @@
                 </div>
             </form>
 			</div>
-            <div class="col-12 col-md-5 align-self-end">
-                <img src="<?= base_url('public/img/productos2.jpg')?>" alt="imagen" class="img-fluid w-100">
+            <div class="col-12 col-md-5 align-self-center text-center">
+                <img src="<?= base_url('public/img/animales1.jpg')?>" alt="imagen" class="img-fluid w-100">
+				<a class="btn btn-primary botondos" href="<?= site_url('/animales/listado') ?>">Ver Inventario</a>
             </div>
 		</div>
 	</div>
+</main>
+<br>
+<br>
+<section>
+	<?php if(session('mensaje')):?>
+		<div class="modal fade" id="modalrespuesta" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="fondoPrincipal">
+						<h5 class="mt-3 mb-3 text-center fuente">CASAHOGAR</h5>
+					</div>
+					<div class="modal-body">
+						<h5 class="fuente text-center"><?= session('mensaje')?></h5>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class=" fuente btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php endif ?>
 </section>
-<br>
-<br>
 <footer class="fondoDos p-5">
 		<div class="container-fluid">
 			<div class="row">
@@ -119,7 +139,8 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+</footer>
+<script type="module" src="<?= base_url('public/js/lanzarmodal.js') ?>"></script>
 <script src="https://kit.fontawesome.com/81dce82071.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>

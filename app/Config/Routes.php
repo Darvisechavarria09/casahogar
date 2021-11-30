@@ -34,7 +34,27 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/productos/registro', 'Productos::index');
 $routes->post('/productos/registro/nuevo', 'Productos::registrar');
+$routes->get('/productos/listado', 'Productos::buscar');
+$routes->delete('/productos/eliminar/(:num)', 'Productos::eliminar/$1');
+$routes->post('/productos/editar/(:num)', 'Productos::editar/$1');
+
 $routes->get('/animales/registro', 'Animales::index');
+$routes->post('/animales/registro/nuevo', 'Animales::registrar');
+$routes->get('/animales/listado', 'Animales::buscar');
+$routes->delete('/animales/eliminar/(:num)', 'Animales::eliminar/$1');
+$routes->post('/animales/editar/(:num)', 'Animales::editar/$1');
+
+//rutas del API
+$routes->get('/apicasahogar/v1', 'APIProductos::buscarProductos');
+$routes->post('/apicasahogar/v1', 'APIProductos::agregarProductos');
+$routes->get('/apicasahogar/v1/(:num)', 'APIProductos::buscarProducto/$1');
+
+//listado para iconos
+$routes->get('/animales/listarperros', 'Animales::buscarperro');
+$routes->get('/animales/listargatos', 'Animales::buscargato');
+$routes->get('/animales/listaraves', 'Animales::buscarave');
+$routes->get('/animales/listarreptiles', 'Animales::buscarreptil');
+$routes->get('/animales/listarcaballos', 'Animales::buscarcaballo');
 
 /*
  * --------------------------------------------------------------------
